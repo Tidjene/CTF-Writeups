@@ -60,7 +60,7 @@ User ctf-player may run the following commands on challenge:
 
 ---
 
-## Exploitation — Sudo + Emacs Shell Escape
+## Exploitation - Sudo + Emacs Shell Escape
 
 ### La technique : Shell Escape depuis Emacs
 
@@ -88,7 +88,7 @@ Puis dans la minibuffer (la barre en bas), on tape :
 shell
 ```
 
-Et on valide avec `Entrée`. Emacs ouvre un terminal shell — qui tourne en tant que **root**.
+Et on valide avec `Entrée`. Emacs ouvre un terminal shell - qui tourne en tant que **root**.
 
 ### Étape 3 : Lire le flag
 
@@ -107,7 +107,7 @@ picoCTF{ju57_5ud0_17_9a782247}
 
 ---
 
-## Explication technique — Pourquoi c'est dangereux ?
+## Explication technique - Pourquoi c'est dangereux ?
 
 Cette vulnérabilité illustre le concept de **GTFOBins** : une collection de binaires Unix légitimes qui peuvent être détournés pour contourner des restrictions de sécurité, notamment les configurations `sudo` mal pensées.
 
@@ -119,7 +119,7 @@ La règle sudo ici est trop permissive :
 (ALL) NOPASSWD: /bin/emacs
 ```
 
-Elle signifie : *"ctf-player peut lancer emacs en tant que root, sans fournir de mot de passe"*. Mais emacs, comme de nombreux éditeurs riches (vim, nano avec certaines options, less, man...), permet d'exécuter des commandes shell depuis l'intérieur — ce qui offre une **élévation de privilèges complète**.
+Elle signifie : *"ctf-player peut lancer emacs en tant que root, sans fournir de mot de passe"*. Mais emacs, comme de nombreux éditeurs riches (vim, nano avec certaines options, less, man...), permet d'exécuter des commandes shell depuis l'intérieur - ce qui offre une **élévation de privilèges complète**.
 
 ### Autres méthodes d'escape depuis Emacs
 
@@ -131,7 +131,7 @@ Elle signifie : *"ctf-player peut lancer emacs en tant que root, sans fournir de
 | Ouvrir un fichier directement | `C-x C-f /home/ctf-player/flag.txt` |
 
 
-## Ce que j'ai appris
+## Leçons
 
 - **Toujours vérifier `sudo -l`** en début d'énumération : c'est souvent le chemin le plus court vers une élévation de privilèges.
 - Les **éditeurs de texte avancés** (emacs, vim, nano) sont des vecteurs d'escalade connus dès qu'ils sont accessibles via sudo - ils permettent d'exécuter des commandes shell sans quitter l'éditeur.
