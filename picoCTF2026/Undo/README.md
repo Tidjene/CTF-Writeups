@@ -5,7 +5,6 @@
 | **Catégorie** | General Skills |
 | **Difficulté** | Easy |
 | **Auteur** | YAHAYA MEDDY |
-| **Flag** | `picoCTF{Revers1ng_t3xt_Tr4nsf0rm@t10ns_8deed4b6}` |
 
 ---
 
