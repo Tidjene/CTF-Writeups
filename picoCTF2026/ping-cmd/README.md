@@ -139,4 +139,4 @@ Le shell interprète `;` comme un séparateur : il exécute `ping -c 2 8.8.8.8` 
 
 ---
 
-*Writeup par [TidiX](https://github.com/Tidjene) — TidiX.Cyber*
+*Writeup par [TidiX](https://github.com/Tidjene) - TidiX.Cyber*
